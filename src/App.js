@@ -1,24 +1,23 @@
-import logo from './logo.svg';
 import './App.css';
+import Gitimage from './componants/Gitimage';
+import Post from './componants/Post';
+import {Routes , Route} from 'react-router-dom';
+
+
+
 
 function App() {
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
+    <>
+
+      <Post></Post>
+      <Gitimage></Gitimage>
+
+    <Routes>
+      <Route path ='/Gitimge' element={<Gitimage/>}> </Route>
+    </Routes> 
+  
+    </>
   );
 }
 
